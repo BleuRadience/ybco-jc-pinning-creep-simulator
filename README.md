@@ -39,7 +39,7 @@ TcSUH thin-film and pinning studies
 Disclaimer
 This is a simulation tool only. Results are predictive, based on public literature, and require experimental validation. No warranty expressed or implied.
 License
-MIT License – see LICENSE file.
+CC BY-NC-SA 4.0 License – see LICENSE file.
 
 Citation
 DOI available on Zenodo (after upload).
