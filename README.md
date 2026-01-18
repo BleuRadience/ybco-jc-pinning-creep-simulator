@@ -28,3 +28,22 @@ print(f"Tc: {Tc:.1f} K | Jc (pre-creep): {Jc:.2e} A/m²")
 # Creep example
 Jc_after_creep = run_creep_simulation(Jc, t=1000, T=77.0, U_p_factor=3.5)
 print(f"Jc after 1000 s creep: {Jc_after_creep:.2e} A/m²")
+
+Literature Calibration References
+
+Additive-manufactured monocrystalline YBCO (Nature Communications 2025)
+Coherent artificial pinning centers (BaHfO₃/BaZrO₃, 2025–2026 papers)
+Overdoped YBCO via electrochemical oxidation
+TcSUH thin-film and pinning studies
+
+Disclaimer
+This is a simulation tool only. Results are predictive, based on public literature, and require experimental validation. No warranty expressed or implied.
+License
+MIT License – see LICENSE file.
+
+Citation
+DOI available on Zenodo (after upload).
+Developed by Cassandra (@BleuRadience, Houston, TX) with iterative assistance from AI.
+
+Contact
+Open to questions, forks, or collaborations.
