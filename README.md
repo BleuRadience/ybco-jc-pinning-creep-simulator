@@ -13,3 +13,18 @@ This open-source Python tool simulates the critical temperature (Tc) dome, criti
 **Installation**
 ```bash
 pip install -r requirements.txt
+
+Quick Example
+
+Pythonimport numpy as np
+from ybco_simulator import tc_parabolic, jc_model, pinning_factor, run_creep_simulation
+
+delta = 0.07
+Tc = tc_parabolic(delta, Tc_max=92.0, delta_opt=0.036, a=231.4)
+pinning = pinning_factor(defect_density=0.15, defect_size_nm=10, defect_type='hybrid', coherent_bonus=1.5)
+Jc = jc_model(delta, B=5.0, T=77.0, pinning_factor=pinning)
+print(f"Tc: {Tc:.1f} K | Jc (pre-creep): {Jc:.2e} A/m²")
+
+# Creep example
+Jc_after_creep = run_creep_simulation(Jc, t=1000, T=77.0, U_p_factor=3.5)
+print(f"Jc after 1000 s creep: {Jc_after_creep:.2e} A/m²")
